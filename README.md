@@ -1,4 +1,4 @@
-# Desafio Tecnico para Backend Developer
+# Desafio Tecnico en la empresa tuGerente.com.
 
 Este es un desafío tecnico para la empresa tuGerente.com.
 
