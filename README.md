@@ -43,6 +43,8 @@ esta es una muestra de como se ve el frontend 🤓✌🏻
 
 ![localhost_3000_ (2)](https://user-images.githubusercontent.com/95236206/189511507-83ef2eea-39ad-4b19-8fb5-a7050a1494ff.png)
 
+![Sin título](https://user-images.githubusercontent.com/95236206/189511851-5f29e55a-cd7e-4059-ad31-4b8245ab2081.png)
+
 ## Autores ✒️
 
 Este desafío fue realizado por mi persona
