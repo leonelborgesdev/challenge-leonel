@@ -38,18 +38,6 @@ export const DropdownButton = () => {
                 </React.Fragment>
               );
             })}
-            {/* <li>
-              <h3>Razon Social</h3>
-            </li>
-            <li>
-              <h3>Nit</h3>
-            </li>
-            <li>
-              <h3>Telefono</h3>
-            </li>
-            <li>
-              <h3>Codigo</h3>
-            </li> */}
           </ul>
         </li>
       </ul>

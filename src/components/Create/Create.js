@@ -1,5 +1,5 @@
 import { addDoc, collection } from "firebase/firestore";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Modal,
   ModalHeader,
@@ -17,7 +17,7 @@ import "./Create.css";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 
-export const Create = ({ state, handleAbrirModal }) => {
+export const Create = ({ state, handleAbrirModal, campo }) => {
   const MySwal = withReactContent(Swal);
   const dispatch = useDispatch();
 
@@ -68,6 +68,23 @@ export const Create = ({ state, handleAbrirModal }) => {
       setLabelError("Debe introduzir Datos en el campo Nombre");
     }
   };
+  useEffect(() => {
+    if (campo.campo === "nombre") {
+      setNombre(campo.value);
+    }
+    if (campo.campo === "razon_social") {
+      setRazon_social(campo.value);
+    }
+    if (campo.campo === "nit") {
+      setNit(campo.value);
+    }
+    if (campo.campo === "telefono") {
+      setTelefono(campo.value);
+    }
+    if (campo.campo === "codigo") {
+      setCodigo(campo.value);
+    }
+  }, [campo]);
   return (
     <>
       <Modal isOpen={state}>
@@ -102,6 +119,7 @@ export const Create = ({ state, handleAbrirModal }) => {
               <Label>Telefono</Label>
               <Input
                 value={telefono}
+                // defaultValue={campo.campo === "telefono" ? campo.value : ""}
                 onChange={(e) => setTelefono(e.target.value)}
                 type="text"
               ></Input>

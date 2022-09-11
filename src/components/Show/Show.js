@@ -24,9 +24,13 @@ export const Show = () => {
   const handleAbrirModal = () => {
     setState(state === true ? false : true);
   };
+  const [campo, setCampo] = useState({ value: "", campo: "" });
   const handlefilter = (e) => {
     const { value } = e.target;
-    console.log(value);
+    setCampo({
+      value: value,
+      campo: attribFilter,
+    });
     if (value) {
       dispatch(getPersonByAttrib(attribFilter, value));
     } else {
@@ -92,7 +96,7 @@ export const Show = () => {
           </div>
         </div>
       </div>
-      <Create state={state} handleAbrirModal={handleAbrirModal} />
+      <Create state={state} handleAbrirModal={handleAbrirModal} campo={campo} />
     </>
   );
 };

@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Desafio Tecnico para Backend Developer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un desafío tecnico para la empresa tuGerente.com.
 
-## Available Scripts
+El mismo consiste en :
 
-In the project directory, you can run:
+Desarrollar usando reactjs un componente de tipo tabla que en primera instancia cuando se monta el componente, muestra los primeros 20 documentos, consultando al servicio de firebase(firestore), buscando coincidencias según el texto escrito (o sin filtro, en caso de que no se haya escrito texto).
 
-### `npm start`
+- El modelo en firebase consiste de los siguientes atributos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. nombre
+2. razón social
+3. nit
+4. teléfono
+5. código
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Debe solicitar resultados paginados de 20 en 20, y solo deberá traer la siguiente página cuando se esté scrolleando cerca al final de la lista actual de resultados.
+- Debe permitir parametrizar por qué atributo del objeto se buscará. La parametrización se debe hacer por código, no en tiempo de ejecución
+- El primer resultado del dropdown debe ser una opción fija que al darle click levante un pequeño pop-up, parte del componente, que permita agregar un nuevo objeto con el texto ya ingresado, pero permitiendo editarlo antes de guardar también.
+- El proyecto esta dockerizado
 
-### `npm test`
+## Comenzando 🚀
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Estas instrucciones te permitirá levantar el proyecto.
 
-### `npm run build`
+### Pre-requisitos 📋
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Necesitaras previamente tener instalado lo siguiente:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Docker Desktop
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Instalación 🔧
 
-### `npm run eject`
+Para levantar el contenedor, utilizas el siguiente comando:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+docker-compose up
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+esta es una muestra de como se ve el frontend 🤓✌🏻
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Autores ✒️
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Este desafío fue realizado por mi persona
 
-## Learn More
+- _Leonel Borges_ - Trabajo Inicial - [Leonel Borges](https://github.com/leonelborgesdev)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⌨️ con ❤️ por [Leonel Borges](https://github.com/leonelborgesdev)🤓✌🏻!!
