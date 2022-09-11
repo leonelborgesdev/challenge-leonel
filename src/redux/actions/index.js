@@ -20,7 +20,7 @@ import {
 export const getAllPersons = () => {
   return async function (dispatch) {
     const personasCollection = collection(db, "persona");
-    const data = query(personasCollection, orderBy("nombre"), limit(3));
+    const data = query(personasCollection, orderBy("nombre"), limit(20));
     const snapshot = await getDocs(data);
     // const data = await getDocs(personasCollection);
     let doc = [];
@@ -44,7 +44,7 @@ export const getPersonByLimit = (ult_doc) => {
       personasCollection,
       orderBy("nombre"),
       startAfter(ult_doc.nombre),
-      limit(3)
+      limit(20)
     );
     const snapshot = await getDocs(data);
     let doc = [];
@@ -64,7 +64,7 @@ export const getPersonByLimit = (ult_doc) => {
     }
   };
 };
-export const getPersonByAttrib = (personas, colum, value) => {
+export const getPersonByAttrib = (colum, value) => {
   return async function (dispatch) {
     const personasCollection = collection(db, "persona");
     const data = query(personasCollection, where(colum, "==", value));
@@ -73,11 +73,11 @@ export const getPersonByAttrib = (personas, colum, value) => {
     snapshot.forEach((person) => {
       docs.push(person.data());
     });
-    console.log(colum, value, docs);
-    if (snapshot > 0) {
+    console.log(docs);
+    if (snapshot) {
       dispatch({
         type: GET_PERSON_BY_ATRIB,
-        payload: snapshot.docs,
+        payload: docs,
       });
     }
   };

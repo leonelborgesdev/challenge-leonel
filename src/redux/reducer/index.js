@@ -39,6 +39,7 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         personas: action.payload,
+        personas_table: action.payload,
       };
     case CHANGE_ATTRIB:
       return {

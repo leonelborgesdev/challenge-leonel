@@ -26,10 +26,14 @@ export const Show = () => {
   };
   const handlefilter = (e) => {
     const { value } = e.target;
-    dispatch(getPersonByAttrib(personas_table, attribFilter, value));
+    console.log(value);
+    if (value) {
+      dispatch(getPersonByAttrib(attribFilter, value));
+    } else {
+      dispatch(getAllPersons());
+    }
   };
   const handlePaginado = () => {
-    console.log("-------------------------------", ult_doc);
     if (!ult_doc) {
       dispatch(getAllPersons());
     }
