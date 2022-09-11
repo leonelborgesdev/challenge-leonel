@@ -37,6 +37,12 @@ docker-compose up
 
 esta es una muestra de como se ve el frontend 🤓✌🏻
 
+![localhost_3000_](https://user-images.githubusercontent.com/95236206/189511422-8b4e56d1-34fd-4f16-87b1-a9afa9bb2675.png)
+
+![localhost_3000_ (1)](https://user-images.githubusercontent.com/95236206/189511459-d0ce7e93-db21-45b6-9bd6-85a872441503.png)
+
+![localhost_3000_ (2)](https://user-images.githubusercontent.com/95236206/189511507-83ef2eea-39ad-4b19-8fb5-a7050a1494ff.png)
+
 ## Autores ✒️
 
 Este desafío fue realizado por mi persona
